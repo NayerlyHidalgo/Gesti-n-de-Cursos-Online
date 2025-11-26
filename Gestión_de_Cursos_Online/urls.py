@@ -13,4 +13,7 @@ urlpatterns = [
     path('auth/login/', TokenObtainPairView.as_view()),
     path('auth/refresh/', TokenRefreshView.as_view()),
     path('', include(router.urls)),
+    path('admin/', admin.site.urls),
+    path('api/', include('users.urls')),    
+    path('api/', include('catalog.urls')),
 ]
